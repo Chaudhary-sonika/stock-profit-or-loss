@@ -13,20 +13,23 @@ function submitHandler() {
     calculateProfitAndLoss(ip, qty, curr);
 }
 function calculateProfitAndLoss(initial, quantity, current) {
-    if (initial>current) {
+    if(initial != "" && quantity != "" && current != "")
+    if(initial > current) {
         var loss = (initial - current) * quantity;
         var lossPercentage = (loss / initial) * 100;
-        showOutput('Hey the loss is ${loss} and loss percent is ${lossPercentage}%');
+        var message = `The loss is ${loss.toFixed(2)} and loss prcentage is ${lossPercentage.toFixed(2)}%`;
+        showOutput(message);
+        outputBox.style.color = 'red';
         
     } else if (current > initial) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit/initial) * 100;
-        
-        showOutput('Hey the profit is ${profit} and the profit percentage is ${profitPercentage}%');
-
-
+        var message = `The profit is ${profit.toFixed(2)} and profit prcentage is ${profitPercentage.toFixed(2)}%`;
+            showOutput(message);
+            outputBox.style.color = 'green';
     } else {
-showOutput('No Pain No Gain and No Gain No Pain');
+        var message = `No pain no gain, no gain no pain`;
+        showOutput(message);
     }
     
 }
