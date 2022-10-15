@@ -8,19 +8,19 @@
     <link href = "styles.css" rel = "stylesheet"/>
 </head>
 <body>
-    <h1>Stock Purchase Profit or Loss</h1>
-    <main>
-        <label for ="initial-price">Initial Price </label>
-        <input type = "number" id = "initial-price"
+    <h1 id="hd">Stock Purchase Profit or Loss</h1>
+    <main id="so">
+        <label for ="int-price">Initial Price </label>
+        <input type = "number" id = "int-price"
              min = "0" placeholder="Enter initial price here" />
-        <label for = "stocks-quantity">Quantity of Stocks</label>
-        <input type ="number" id = "stocks-quantity"
+        <label for = "stock-qty">Quantity of Stocks</label>
+        <input type ="number" id = "stock-qty"
         min = "0" placeholder="Enter the Number of Stocks you bought"/>
-        <label for = "current-price">Current Price</label>
-        <input type = "number" id = "current-price"
+        <label for = "crt-price">Current Price</label>
+        <input type = "number" id = "crt-price"
         min="0" placeholder="Enter current price here" />
-       <button id = "submit-btn">Calculate</button>
-       <div id = "output-box"></div>
+       <button id = "cal-btn">Calculate</button>
+       <div id = "output"></div>
        <script src="app.js" type = "text/javascript"></script>
     </main>
    
